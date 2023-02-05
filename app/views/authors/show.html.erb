@@ -3,9 +3,15 @@
 <p><%= @author.bio %></p>
 
 <ul>
-  <li><%= link_to "Edit", edit_author_path(@author) %></li>
-  <li><%= link_to "Destroy", author_path(@author), data: {
+  <li><%= link_to "Edit Author", edit_author_path(@author) %></li>
+  <li><%= link_to "Delete Author", author_path(@author), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"
   } %></li>
 </ul>
+
+<h2>Books</h2>
+<%= render @author.books %>
+
+<h2>Add a book:</h2>
+<%= render 'books/form' %>

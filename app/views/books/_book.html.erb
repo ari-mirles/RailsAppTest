@@ -1,0 +1,14 @@
+<p>
+  <strong>Title:</strong>
+  <%= book.title %>
+<br>
+  <strong>Synopsis:</strong>
+  <%= book.synopsis %>
+</p>
+
+<p>
+  <%= link_to "Delete Book", [book.author, book], data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %>
+</p>

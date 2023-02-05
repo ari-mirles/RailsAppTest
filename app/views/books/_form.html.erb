@@ -1,0 +1,13 @@
+<%= form_with model: [ @author, @author.books.build ] do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :synopsis %><br>
+    <%= form.text_area :synopsis %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
