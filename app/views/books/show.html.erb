@@ -3,6 +3,7 @@
 <p><%= @book.synopsis %></p>
 
 <ul>
+  <%= link_to "Edit Book", edit_book_path(@book) %>
   <li><%= link_to "Delete Book", book_path(@book), data: {
     turbo_method: :delete,
     turbo_confirm: "Are you sure?"

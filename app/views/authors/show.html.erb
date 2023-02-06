@@ -21,7 +21,20 @@
 </ul>
 
 <h2>Add a book:</h2>
-<%= render 'books/form' %>
+<%= form_with model: [ @author, @author.books.build ] do |form| %>
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+  <p>
+    <%= form.label :synopsis %><br>
+    <%= form.text_area :synopsis %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+<%#= render 'books/form' %>
 
 <li><%= link_to "Authors", root_path %></li>
 <li><%= link_to "Books", books_path %></li>
