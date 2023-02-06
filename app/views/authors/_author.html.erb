@@ -1,0 +1,14 @@
+<p>
+  <strong>Name:</strong>
+  <%= author.name %>
+<br>
+  <strong>Bio:</strong>
+  <%= author.bio %>
+</p>
+
+<p>
+  <%= link_to "Delete Author", [book.author, book], data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %>
+</p>

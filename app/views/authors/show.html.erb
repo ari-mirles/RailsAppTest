@@ -11,7 +11,18 @@
 </ul>
 
 <h2>Books</h2>
-<%= render @author.books %>
+
+<ul>
+  <% @books.each do |book| %>
+    <li>
+      <%= link_to book.title, book %>
+    </li>
+  <% end %>
+</ul>
 
 <h2>Add a book:</h2>
 <%= render 'books/form' %>
+
+<li><%= link_to "Authors", root_path %></li>
+<li><%= link_to "Books", books_path %></li>
+

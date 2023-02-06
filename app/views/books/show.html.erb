@@ -1,0 +1,17 @@
+<h1><%= @book.title %></h1>
+
+<p><%= @book.synopsis %></p>
+
+<ul>
+  <li><%= link_to "Delete Book", book_path(@book), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?"
+  } %></li>
+</ul>
+
+<h1><%= link_to @author.name, @author %></h1>
+
+<p><%= @author.bio %></p>
+
+<li><%= link_to "Authors", root_path %></li>
+<li><%= link_to "Books", books_path %></li>

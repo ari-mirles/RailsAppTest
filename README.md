@@ -5,13 +5,15 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.2.0
 
-* System dependencies
+* Rails version: 7.0.4.2
 
-* Configuration
+* System dependencies: Git, Ruby, Rails
 
-* Database creation
+* Configuration: Rubymine project then run bundle install for Gems
+
+* Database creation: rails db:migrate
 
 * Database initialization
 

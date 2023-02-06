@@ -1,4 +1,5 @@
 <%= form_with model: [ @author, @author.books.build ] do |form| %>
+<%#= form_with model: body do |form| %>
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>

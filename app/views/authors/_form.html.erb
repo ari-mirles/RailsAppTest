@@ -1,21 +1,21 @@
 <%= form_with model: author do |form| %>
-  <div>
+  <p>
     <%= form.label :name %><br>
     <%= form.text_field :name %>
     <% author.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
+  </p>
 
-  <div>
+  <p>
     <%= form.label :bio %><br>
     <%= form.text_area :bio %><br>
     <% author.errors.full_messages_for(:bio).each do |message| %>
       <div><%= message %></div>
     <% end %>
-  </div>
+  </p>
 
-  <div>
+  <p>
     <%= form.submit %>
-  </div>
+  </p>
 <% end %>
