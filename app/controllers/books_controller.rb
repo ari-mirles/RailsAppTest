@@ -33,8 +33,9 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @author = Author.find(params[:author_id])
-    @book = @author.books.find(params[:id])
+    @book = Book.find(params[:id])
+    @author = Author.find(@book.author_id)
+
     @book.destroy
     redirect_to author_path(@author), status: :see_other
   end
